@@ -120,7 +120,7 @@ python main.py \
     --batch_size 1 \
     --postprocess general_torch \
     --params models/model_params/vllm_sample.json \
-    --write_out
+    --write_out | tee -a /scratch/azureml/cr/j/xxx/exe/wd/user_logs/example_log.txt
 ```
 以下是具体的参数描述：
 * ``model``: 指定模型，目前支持general、gpt-3.5-turbo、gpt-4三种模型。
