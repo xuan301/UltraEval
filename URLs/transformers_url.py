@@ -7,6 +7,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--model_name", type=str, help="Model name on hugginface")
 parser.add_argument("--port", type=int, default=5002, help="the port")
+parser.add_argument("--log_name", type=str, default="prosparsellama7b_LOG", help="the log name")
 args = parser.parse_args()
 
 app = Flask(__name__)
@@ -66,5 +67,10 @@ def main():
 
 if __name__ == '__main__':
     # Run the Flask app
+    print("Start Run Server")
     http_server = WSGIServer(('127.0.0.1', args.port), app)
+    print("Start Serve Forever")
+    eval_name = args.log_name
+    with open(f'{eval_name}', 'w') as f:
+        f.write('Start Serve Forever\n')
     http_server.serve_forever()

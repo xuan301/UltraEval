@@ -97,6 +97,11 @@ python URLs/vllm_url.py \
     --gpuid 0 \
     --port 5002
 ```
+```shell
+python URLs/transformers_url.py \
+    --model_name /home/xxx/code/ProSparsellama/7B \
+    --port 5002
+```
 以下是具体的参数描述：
 * ``model_name``: 模型名，使用vLLM时，model_name和hugging face官方名称需保持一致。
 * ``gpuid``: 指定部署模型的gpu id，默认0。如果需要多个，可用,隔开
@@ -109,8 +114,8 @@ python URLs/vllm_url.py \
 ```shell
 python main.py \
     --model general \
-    --model_args url=$URL,concurrency=1 \
-    --config_path configs/eval_config.json \
+    --model_args url=http://127.0.0.1:5002/infer,concurrency=1 \
+    --config_path configs/eval_prosparse.json \
     --output_base_path logs \
     --batch_size 1 \
     --postprocess general_torch \

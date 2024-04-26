@@ -1,0 +1,64 @@
+[
+    {
+        "task_name": "lambada_lambada_gen",
+        "path": "datasets/lambada/data/lambada.jsonl",
+        "description": "",
+        "transform": "datasets/lambada/transform_gen_v0.py",
+        "fewshot": 0,
+        "generate": {
+            "method": "generate",
+            "params": ""
+        },
+        "postprocess": "",
+        "metric": {
+            "accuracy": {
+                "evaluation": {
+                    "type": "prefix_match"
+                }
+            }
+        }
+    },
+    {
+        "task_name": "tydiqa_tydiqa_gen",
+        "path": "datasets/tydiqa/data/tydiqa.jsonl",
+        "description": "",
+        "transform": "datasets/tydiqa/transform_gen_v0.py",
+        "fewshot": 0,
+        "generate": {
+            "method": "generate",
+            "params": ""
+        },
+        "postprocess": "exact_match_post",
+        "metric": {
+            "f1_score": {
+                "evaluation": {
+                    "type": "f1_score"
+                }
+            },
+            "accuracy": {
+                "evaluation": {
+                    "type": "exact_match"
+                }
+            }
+        }
+    },
+    {
+        "task_name": "gsm8k_gsm8k_gen",
+        "path": "datasets/gsm8k/data/gsm8k.jsonl",
+        "description": "",
+        "transform": "datasets/gsm8k/transform_gen_v0.py",
+        "fewshot": 8,
+        "generate": {
+            "method": "generate",
+            "params": "models/model_params/vllm_sample_v1.json"
+        },
+        "postprocess": "gsm8k_post",
+        "metric": {
+            "accuracy": {
+                "evaluation": {
+                    "type": "exact_match"
+                }
+            }
+        }
+    }
+]
