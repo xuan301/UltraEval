@@ -9,3 +9,4 @@ wip-*
 .idea/
 RawData.zip
 logs*/
+*.pkl

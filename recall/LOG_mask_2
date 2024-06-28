@@ -1,0 +1,8 @@
+Initializing model and tokenizer...
+The repository for /home/v-liuwenxuan/code/ProSparsellama/7B contains custom code which must be executed to correctly load the model. You can inspect the repository content at https://hf.co//home/v-liuwenxuan/code/ProSparsellama/7B.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] The repository for /home/v-liuwenxuan/code/ProSparsellama/7B contains custom code which must be executed to correctly load the model. You can inspect the repository content at https://hf.co//home/v-liuwenxuan/code/ProSparsellama/7B.
+You can avoid this prompt in future by passing the argument `trust_remote_code=True`.
+
+Do you wish to run the custom code? [y/N] 

@@ -99,7 +99,7 @@ python URLs/vllm_url.py \
 ```
 ```shell
 python URLs/transformers_url.py \
-    --model_name /home/xxx/code/ProSparsellama/7B \
+    --model_name /home/v-liuwenxuan/code/ProSparsellama/7B \
     --port 5002
 ```
 以下是具体的参数描述：
